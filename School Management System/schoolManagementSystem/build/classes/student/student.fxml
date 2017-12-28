@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student.studentController">
+   <children>
+      <TabPane prefHeight="600.0" prefWidth="1080.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="600.0" tabMaxWidth="1080.0">
+        <tabs>
+            <Tab text="Student Details">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="1080.0">
+                     <children>
+                        <HBox layoutX="279.0" layoutY="1.0" prefHeight="568.0" prefWidth="799.0">
+                           <children>
+                              <TableView fx:id="markstable" prefHeight="568.0" prefWidth="799.0">
+                                 <columns>
+                                    <TableColumn fx:id="studmarkidcol" prefWidth="77.0" text="ID" />
+                                    <TableColumn fx:id="studmarknamecol" prefWidth="175.0" text="Student Name" />
+                                    <TableColumn fx:id="studmarkmathscol" prefWidth="90.0" text="Maths" />
+                                    <TableColumn fx:id="studmarksciencecol" prefWidth="90.0" text="Science" />
+                                    <TableColumn fx:id="studmarkenglishcol" prefWidth="90.0" text="English" />
+                                    <TableColumn fx:id="studmarktotalcol" prefWidth="90.0" text="Total" />
+                                    <TableColumn fx:id="studmarkpercentcol" prefWidth="90.0" text="Percentage" />
+                                    <TableColumn fx:id="studmarkgradecol" prefWidth="96.0" text="Grade" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="14.0" prefHeight="21.0" prefWidth="232.0" text="Student Details" textAlignment="JUSTIFY" textFill="#f28b37">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="35.0" layoutY="41.0" prefHeight="95.0" prefWidth="222.0" spacing="10.0">
+                           <children>
+                              <Text fx:id="studresid" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="220.607421875" />
+                              <Text fx:id="studresname" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="220.607421875" />
+                              <Text fx:id="studresfname" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="220.607421875" />
+                              <Text fx:id="studresadd" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="220.607421875" />
+                              <Text fx:id="studresdob" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="220.607421875" />
+                           </children>
+                        </VBox>
+                        <Label alignment="CENTER" layoutX="36.0" layoutY="275.0" prefHeight="17.0" prefWidth="220.0" text="Update Info" textFill="#fa892a">
+                           <font>
+                              <Font name="Arial Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="35.0" layoutY="308.0" prefHeight="235.0" prefWidth="222.0" spacing="10.0">
+                           <children>
+                              <TextField fx:id="studupdname" promptText="Student Name" />
+                              <TextField fx:id="studupdfname" promptText="Father's Name" />
+                              <TextField fx:id="studupdadd" promptText="Address" />
+                              <DatePicker fx:id="studupddob" prefHeight="25.0" prefWidth="222.0" promptText="Date of Birth" />
+                              <Button fx:id="studupdclc" mnemonicParsing="false" onAction="#studupdclcfunc" prefHeight="25.0" prefWidth="222.0" text="Clear Form" />
+                              <Button fx:id="studupd" mnemonicParsing="false" onAction="#studupdfunc" prefHeight="25.0" prefWidth="224.0" text="Update" />
+                              <Label fx:id="studresstatus" alignment="CENTER" prefHeight="17.0" prefWidth="264.0" textFill="#fc0c0c" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
